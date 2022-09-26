@@ -48,13 +48,13 @@
           <img src="./img/super-man.png" alt="" />
         </section>
         <section class="footer">
-          <div>
+          <div id="botton1">
             <img src="./img/batman.webp" alt="" />
           </div>
-          <div>
+          <div id="botton2">
             <img src="./img/robin.png" alt="" />
           </div>
-          <div>
+          <div id="botton3">
             <img src="./img/spiderman.png" alt="" />
           </div>
         </section>
@@ -68,7 +68,54 @@
         <div></div>
       </section>
       <!-- Modal -->
-      <section></section>
+      <section class="modal hidden">
+        <div class="modal_content">
+          <img class="icon" src="./img/icon.png" alt="" />
+          <div class="slider">
+            <input type="radio" name="slider-1" id="radio-1" checked />
+            <input type="radio" name="slider-1" id="radio-2" />
+            <input type="radio" name="slider-1" id="radio-3" />
+            <div class="cards">
+              <label for="radio-1" id="card-1" class="card">
+                <img src="./img/bataman/night staleker.jpg" alt="" />
+              </label>
+              <label for="radio-2" id="card-2" class="card">
+                <img src="./img/bataman/night staleker-2.jpg" alt="" />
+              </label>
+              <label for="radio-3" id="card-3" class="card">
+                <img src="./img/bataman/night staleker-3.jpg" alt="" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
+  <script>
+    const modal = document.querySelector(".modal");
+    const botton1 = document.querySelector("#botton1");
+    const botton2 = document.querySelector("#botton2");
+    const botton3 = document.querySelector("#botton3");
+    const icon = document.querySelector(".icon");
+
+    botton1.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("visible");
+    });
+
+    botton2.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("visible");
+    });
+
+    botton3.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("visible");
+    });
+
+    icon.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("visible");
+    });
+  </script>
 </html>
